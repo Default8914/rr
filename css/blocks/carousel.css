@@ -1,0 +1,129 @@
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    background: linear-gradient(90deg, #785535 0%, #DE9D62 50%, #785535 100%);
+}
+
+.carousel__track {
+    display: flex;
+    width: fit-content;
+    animation: carousel-scroll 30s linear infinite;
+}
+
+.carousel__content {
+    display: flex;
+    gap: 30px;
+    padding: 0 15px;
+}
+
+.carousel__item {
+    width: 181px;
+    height: 167px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel__item:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 1440px) {
+    .carousel {
+        padding: 35px 0;
+    }
+
+    .carousel__item {
+        width: 162px;
+        height: 150px;
+    }
+
+    .carousel__content {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel {
+        padding: 30px 0;
+    }
+
+    .carousel__item {
+        width: 144px;
+        height: 133px;
+    }
+
+    .carousel__content {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        padding: 25px 0;
+    }
+
+    .carousel__item {
+        width: 126px;
+        height: 116px;
+    }
+
+    .carousel__content {
+        gap: 15px;
+    }
+
+    .carousel__track {
+        animation-duration: 25s;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        padding: 20px 0;
+    }
+
+    .carousel__item {
+        width: 108px;
+        height: 100px;
+    }
+
+    .carousel__content {
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .carousel__track {
+        animation-duration: 20s;
+    }
+}
+
+@media (max-width: 320px) {
+    .carousel {
+        padding: 15px 0;
+    }
+
+    .carousel__item {
+        width: 90px;
+        height: 83px;
+    }
+
+    .carousel__content {
+        gap: 10px;
+        padding: 0 8px;
+    }
+}
+
